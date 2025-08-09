@@ -100,7 +100,7 @@ Now we have a confession and suspect_id; let's cross reference that with our sus
 > [!note] 
 > The answer field is expecting the full name, not partial. 
 
-![Case_Solved](Case_Solved.png)
+![Case_Solved](../images/Case_Solved.png)
 
 # Final Thoughts on the case
 Through careful cross-referencing of data, we were able to narrow down the suspects in no time thus reinforcing that we should always be looking for the most amount of correlational data when we are doing our searches.
