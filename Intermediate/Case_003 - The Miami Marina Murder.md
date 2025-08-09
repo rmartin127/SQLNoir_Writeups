@@ -77,6 +77,7 @@ select * from crime_scene where location = "Coral Bay Marina"
 |id|date|location|description|
 |---|---|---|---|
 |43|19860814|Coral Bay Marina|The body of an unidentified man was found near the docks. Two people were seen nearby: one who lives on 300ish "Ocean Drive" and another whose first name ends with "ul" and his last name ends with "ez".|
+
 ### Intel
 - witness1 address: 300ish "Ocean Drive"
 - witness2 name: first name ends in "ul" and last name "ez"
@@ -94,6 +95,7 @@ select * from person where address like "3% Ocean Drive" or name like "%ul %ez"
 |101|Carlos Mendez|Los Ojos|Fisherman|369 Ocean Drive|
 |102|Raul Gutierrez|The Cobra|Nightclub Owner|45 Sunset Ave|
 |105|Victor Martinez|Slick Vic|Bartender|33 Ocean Drive|
+
 Let's dissect this information to narrow it down!; according to our information Raul Gutierrez, id 102, is the only person that matches the First name "ul" last name "ez". So, that's important to take note. Now in order to figure out witness1 we see that information says "300ish" Ocean drive, and the only one that matches the 300ish range is Carlos Mendez, id 101.
 
 ## Diving Deeper
@@ -109,6 +111,7 @@ select transcript from interviews where person_id in (101,102)
 | I saw someone check into a hotel on August 13. The guy looked nervous. |
 | I heard someone checked into a hotel with "Sunset" in the name.        |
 From this we can discern the details that 19860813 would be our date; and the hotel name would contain Sunset. In order to account for Something like The Sunset Hotel, we can wrap the text in `%` as shown below.
+
 ```sql
 select * from hotel_checkins where check_in_date = 19860813 and hotel_name like "%Sunset%"
 ```
@@ -176,6 +179,7 @@ where check_in_date = 19860813 and hotel_name like "%Sunset%" and suspicious_act
 | 64  | 196       | Requested wake-up call         |
 | 86  | 198       | Used the business center       |
 | 70  | 200       | Asked about checkout time      |
+
 still quite a lengthy list, but getting somewhere. We can use another join statement to add a 3rd table to the mix! confessions.
 
 
@@ -212,6 +216,7 @@ select name from persons where id = 8
 | name         |
 | ------------ |
 | Thomas Brown |
+
 another way is to simply add another join statement which just joins the `person.id` and any one of the `tables.person_id`. I'll leave that as an exercise to the reader
 ![Case_Solved](../images/Case_Solved.png)
 
