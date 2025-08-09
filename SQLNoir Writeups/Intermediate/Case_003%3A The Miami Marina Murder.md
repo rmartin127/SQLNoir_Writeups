@@ -213,7 +213,7 @@ select name from persons where id = 8
 | ------------ |
 | Thomas Brown |
 another way is to simply add another join statement which just joins the `person.id` and any one of the `tables.person_id`. I'll leave that as an exercise to the reader
-![Case_Solved](Case_Solved.png)
+![Case_Solved](../images/Case_Solved.png)
 
 # Closing thoughts
 
