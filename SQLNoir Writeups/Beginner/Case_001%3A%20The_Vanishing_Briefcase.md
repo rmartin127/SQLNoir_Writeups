@@ -81,7 +81,7 @@ Well, That's convenient. You'll find out that the suspects typically admit they 
 > The answer field is expecting the full name, not partial. 
 
 
-![SUCCESS](../SQLNoir%20Writeups/images/Case_Solved.png)
+![SUCCESS](../images/Case_Solved.png)
 
 # Final thoughts on the case
 
