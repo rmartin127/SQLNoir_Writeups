@@ -29,5 +29,5 @@ Welcome detectives, come along with me on a journey to discover whodunnit in the
 
 |                                    beginner                                    | intermediate | advanced |
 | :----------------------------------------------------------------------------: | ------------ | -------- |
-| [Case# 001: The_Vanishing_Briefcase](SQLNoir%20Writeups/Beginner/Case_001%3A%20The_Vanishing_Briefcase.md) |              |          |
+| [Case# 001: The_Vanishing_Briefcase](SQLNoir%20Writeups/Beginner/Case_001%253A%2520The_Vanishing_Briefcase.md) |              |          |
 |                                                                                |              |          |
