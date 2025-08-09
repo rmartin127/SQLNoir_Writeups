@@ -38,7 +38,7 @@ Given the list of information from the briefing let's get the full crime scene i
 select * from crime_scene where location = "Blue Note Lounge";
 ```
 
-![Case_Info.png](SQLNoir%20Writeups/images/Case_Info.png)
+![Case_Info.png](../images/Case_Info.png)
 The case ID returned is 76, and the date is revealed to be 19851120; there is also additional information about the suspect that is revealed.
 ```txt
 Description:
@@ -80,7 +80,7 @@ Well, That's convenient. You'll find out that the suspects typically admit they 
 > The answer field is expecting the full name, not partial. 
 
 
-![SUCCESS](SQLNoir%20Writeups/images/Case_Solved.png)
+![SUCCESS](../SQLNoir%20Writeups/images/Case_Solved.png)
 
 # Final thoughts on the case
 
