@@ -95,6 +95,7 @@ select * from interviews where suspect_id in (35,44,97);
 |35|I wasn't anywhere near West Hollywood Records that night.|
 |44|I was busy with my music career; I have nothing to do with this theft.|
 |97|I couldn't help it. I snapped and took the record.|
+
 Now we have a confession and suspect_id; let's cross reference that with our suspects that we discovered earlier -- we see that the person whodunnit is.... Rico
 
 > [!note] 
