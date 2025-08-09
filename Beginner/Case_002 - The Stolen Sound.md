@@ -56,6 +56,7 @@ This query yields the following information:
 | ------------------------------------------------------------------------------- |
 | I saw a man wearing a red bandana rushing out of the store.                     |
 | The main thing I remember is that he had a distinctive gold watch on his wrist. |
+
 This gives us two new important information if we reference our table information:
 - bandana_color = "red"
 - accessory = "gold watch"
@@ -83,6 +84,7 @@ select string_agg(id,","),string_agg(name," - ")from suspects where bandana_colo
 | string_agg(id,",") | string_agg(name," - ")                      |
 | ------------------ | ------------------------------------------- |
 | 35,44,97           | Tony Ramirez - Mickey Rivera - Rico Delgado |
+
 ## Retrieving the confession
 Now that we have a comma separated list we can use that to find out some information from the "interviews" table.
 
