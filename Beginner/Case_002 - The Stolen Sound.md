@@ -56,7 +56,6 @@ This query yields the following information:
 | ------------------------------------------------------------------------------- |
 | I saw a man wearing a red bandana rushing out of the store.                     |
 | The main thing I remember is that he had a distinctive gold watch on his wrist. |
-
 This gives us two new important information if we reference our table information:
 - bandana_color = "red"
 - accessory = "gold watch"
@@ -84,7 +83,6 @@ select string_agg(id,","),string_agg(name," - ")from suspects where bandana_colo
 | string_agg(id,",") | string_agg(name," - ")                      |
 | ------------------ | ------------------------------------------- |
 | 35,44,97           | Tony Ramirez - Mickey Rivera - Rico Delgado |
-
 ## Retrieving the confession
 Now that we have a comma separated list we can use that to find out some information from the "interviews" table.
 
@@ -97,13 +95,12 @@ select * from interviews where suspect_id in (35,44,97);
 |35|I wasn't anywhere near West Hollywood Records that night.|
 |44|I was busy with my music career; I have nothing to do with this theft.|
 |97|I couldn't help it. I snapped and took the record.|
-
 Now we have a confession and suspect_id; let's cross reference that with our suspects that we discovered earlier -- we see that the person whodunnit is.... Rico
 
 > [!note] 
 > The answer field is expecting the full name, not partial. 
 
-![Case_Solved](../images/Case_Solved.png)
+![Case_Solved](Case_Solved.png)
 
 # Final Thoughts on the case
 Through careful cross-referencing of data, we were able to narrow down the suspects in no time thus reinforcing that we should always be looking for the most amount of correlational data when we are doing our searches.

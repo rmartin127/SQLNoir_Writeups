@@ -74,10 +74,9 @@ Let's start by investigating the crime scene as a whole;
 select * from crime_scene where location = "Coral Bay Marina"
 ```
 
-|id|date|location|description|
-|---|---|---|---|
-|43|19860814|Coral Bay Marina|The body of an unidentified man was found near the docks. Two people were seen nearby: one who lives on 300ish "Ocean Drive" and another whose first name ends with "ul" and his last name ends with "ez".|
-
+| id  | date     | location         | description                                                                                                                                                                                                |
+| --- | -------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 43  | 19860814 | Coral Bay Marina | The body of an unidentified man was found near the docks. Two people were seen nearby: one who lives on 300ish "Ocean Drive" and another whose first name ends with "ul" and his last name ends with "ez". |
 ### Intel
 - witness1 address: 300ish "Ocean Drive"
 - witness2 name: first name ends in "ul" and last name "ez"
@@ -89,13 +88,12 @@ SQL allows us to do fuzzy matching using the wildcard character `%`;
 select * from person where address like "3% Ocean Drive" or name like "%ul %ez"
 ```
 
-|id|name|alias|occupation|address|
-|---|---|---|---|---|
-|5|Michael Santos|Silent Mike|Bartender|33 Ocean Drive|
-|101|Carlos Mendez|Los Ojos|Fisherman|369 Ocean Drive|
-|102|Raul Gutierrez|The Cobra|Nightclub Owner|45 Sunset Ave|
-|105|Victor Martinez|Slick Vic|Bartender|33 Ocean Drive|
-
+| id  | name            | alias       | occupation      | address         |
+| --- | --------------- | ----------- | --------------- | --------------- |
+| 5   | Michael Santos  | Silent Mike | Bartender       | 33 Ocean Drive  |
+| 101 | Carlos Mendez   | Los Ojos    | Fisherman       | 369 Ocean Drive |
+| 102 | Raul Gutierrez  | The Cobra   | Nightclub Owner | 45 Sunset Ave   |
+| 105 | Victor Martinez | Slick Vic   | Bartender       | 33 Ocean Drive  |
 Let's dissect this information to narrow it down!; according to our information Raul Gutierrez, id 102, is the only person that matches the First name "ul" last name "ez". So, that's important to take note. Now in order to figure out witness1 we see that information says "300ish" Ocean drive, and the only one that matches the 300ish range is Carlos Mendez, id 101.
 
 ## Diving Deeper
@@ -111,7 +109,6 @@ select transcript from interviews where person_id in (101,102)
 | I saw someone check into a hotel on August 13. The guy looked nervous. |
 | I heard someone checked into a hotel with "Sunset" in the name.        |
 From this we can discern the details that 19860813 would be our date; and the hotel name would contain Sunset. In order to account for Something like The Sunset Hotel, we can wrap the text in `%` as shown below.
-
 ```sql
 select * from hotel_checkins where check_in_date = 19860813 and hotel_name like "%Sunset%"
 ```
@@ -206,6 +203,7 @@ where check_in_date = 19860813 and hotel_name like "%Sunset%" and suspicious_act
 | 94  | 45        | Asked about check-in time      | Check my records, I'm clean.                                               |
 | 14  | 48        | Requested room cleaning        | You're making a big mistake.                                               |
 | 36  | 50        | Used hotel elevator            | I was at work all day.                                                     |
+
 
 This is a shortened list, but we got lucky that it was near the top, so we don't need to do any more digging. now to see who this mysterious person_id = 8 is...
 
