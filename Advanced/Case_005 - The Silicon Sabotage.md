@@ -180,7 +180,7 @@ select * from employee_records where id in (99,263,297)
 | 263 | Norman Owens     | Quantum Computing | Quantum Systems Engineer | 234 Quantum Waters Lane, Key Biscayne, FL |
 | 297 | Hristo Bogoev    | Engineering       | Principal Engineer       | 901 Quantum Ocean Way, Key Biscayne, FL   |
 
-So it appears that the mysterious 'L' is the Solutions Architect, Elizabeth Gordon. She was being framed by the Principal Engineer, Hristo Bogoev, and the Principal Engineer, Norman Owens. And as it would appear by the solution being accepted that Hristo was the one who pulled the trigger (Hmm, I wonder why that name sounds familiar.)
+So it appears that the mysterious 'L' is the Solutions Architect, Elizabeth Gordon. She was being framed by the Principal Engineer, Hristo Bogoev, and the Quantum Systems Engineer, Norman Owens. And as it would appear by the solution being accepted that Hristo was the one who pulled the trigger (Hmm, I wonder why that name sounds familiar.)
 
 
 # Closing Thoughts
