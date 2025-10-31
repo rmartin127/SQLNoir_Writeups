@@ -72,6 +72,7 @@ select id,name from suspects where bandana_color = "red" and accessory = "gold w
 | 35  | Tony Ramirez  |
 | 44  | Mickey Rivera |
 | 97  | Rico Delgado  |
+
 This returns 3 names and ids, here I'll show a neat trick I picked up from the more advanced cases where you may have *way* more information.
 
 ```sql
@@ -95,17 +96,20 @@ select * from interviews where suspect_id in (35,44,97);
 |35|I wasn't anywhere near West Hollywood Records that night.|
 |44|I was busy with my music career; I have nothing to do with this theft.|
 |97|I couldn't help it. I snapped and took the record.|
+
 Now we have a confession and suspect_id; let's cross reference that with our suspects that we discovered earlier -- we see that the person whodunnit is.... Rico
 
 > [!note] 
 > The answer field is expecting the full name, not partial. 
 
-![Case_Solved](Case_Solved.png)
+![Case_Solved](../images/Case_Solved.png)
 
 # Final Thoughts on the case
 Through careful cross-referencing of data, we were able to narrow down the suspects in no time thus reinforcing that we should always be looking for the most amount of correlational data when we are doing our searches.
 
 Thanks for joining me on the case detectives, stay savvy
+
+---
 ```
   .OOOOOOOOOOOOOOO @@         D i c k  T r a c y        @@ OOOOOOOOOOOOOOOO.
   OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO

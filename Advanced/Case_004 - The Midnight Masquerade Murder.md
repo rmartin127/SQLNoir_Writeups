@@ -196,7 +196,9 @@ There is another way to figure out it was Marco, considering we have a call log 
 Well detectives, it was another tough day in the office. But we cracked the case of whodunnit. And as we can see, sometimes there may be red herring databases which lead us nowhere. But, using our solid sleuthing skills we were able to track down who ordered the kill.
 
 Stay Savvy Detectives.
-```
+
+---
+```ascii
   .OOOOOOOOOOOOOOO @@         D i c k  T r a c y        @@ OOOOOOOOOOOOOOOO.
   OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO
   OOOOOOOOOO'''''' @@                                    @@ ```````OOOOOOOOO

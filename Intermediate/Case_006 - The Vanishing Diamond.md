@@ -98,6 +98,7 @@ select * from guest where occupation = "Actor" or (occupation = "Consultant" and
 |164|River Bowers|Actor|VIP-B|
 |189|Sage Dillon|Actor|VIP-G|
 |192|Phoenix Pitts|Actor|VIP-G|
+
 Looks like we're in luck, The only consultant who's first name ends in "an" is Vivian Nair, id 116. And the only famous actor on the list is Clint Eastwood, id129. So, let's see what they have to say about the incident.
 
 ## Witness Statements
@@ -141,6 +142,12 @@ where guest.invitation_code like "%-R" and attire_registry.note like "%Navy Suit
 
 "Crystal" can be another name for a diamond. Looks like Mike is our culprit
 ![Case_Solved](../images/Case_Solved.png)
+
+
+# Closing Thoughts
+Hello Detectives, as of the writing of this, this is the last case so far. But it was still exhilarating to work through let's hope in the future the cases are just as fun and exciting to work through. 
+
+Stay Savvy, Detectives
 
 ---
 ```

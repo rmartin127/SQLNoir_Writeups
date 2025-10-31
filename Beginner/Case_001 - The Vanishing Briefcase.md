@@ -39,6 +39,7 @@ select * from crime_scene where location = "Blue Note Lounge";
 ```
 
 ![Case_Info](../images/Case_Info.png)
+
 The case ID returned is 76, and the date is revealed to be 19851120; there is also additional information about the suspect that is revealed.
 ```txt
 Description:
@@ -89,6 +90,7 @@ We utilized the initial case information regarding the location to get informati
 
 Thanks for reading and hopefully following along in order to solve this case, stay savvy detectives.
 
+---
 ```
   .OOOOOOOOOOOOOOO @@         D i c k  T r a c y        @@ OOOOOOOOOOOOOOOO.
   OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO

@@ -94,6 +94,7 @@ select * from person where address like "3% Ocean Drive" or name like "%ul %ez"
 | 101 | Carlos Mendez   | Los Ojos    | Fisherman       | 369 Ocean Drive |
 | 102 | Raul Gutierrez  | The Cobra   | Nightclub Owner | 45 Sunset Ave   |
 | 105 | Victor Martinez | Slick Vic   | Bartender       | 33 Ocean Drive  |
+
 Let's dissect this information to narrow it down!; according to our information Raul Gutierrez, id 102, is the only person that matches the First name "ul" last name "ez". So, that's important to take note. Now in order to figure out witness1 we see that information says "300ish" Ocean drive, and the only one that matches the 300ish range is Carlos Mendez, id 101.
 
 ## Diving Deeper
@@ -215,14 +216,17 @@ select name from persons where id = 8
 | ------------ |
 | Thomas Brown |
 
-another way is to simply add another join statement which just joins the `person.id` and any one of the `tables.person_id`. I'll leave that as an exercise to the reader
+another way is to simply add another join statement which just joins the `person.id` and any one of the `tables.person_id`. I'll leave that as an exercise to the reader.
+
 ![Case_Solved](../images/Case_Solved.png)
 
 # Closing thoughts
 
 This is the first of the advanced investigations, and tests your knowledge of more advanced querying like `join` where you can connect the dots between tables based on certain criteria
 
-Stay Savvy Detectives.
+Stay Savvy, Detectives.
+
+---
 ```
   .OOOOOOOOOOOOOOO @@         D i c k  T r a c y        @@ OOOOOOOOOOOOOOOO.
   OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO
